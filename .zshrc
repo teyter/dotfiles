@@ -116,6 +116,9 @@ function install { sudo eopkg install $1 }
 # eopkg search
 function search { sudo eopkg search $1 }
 
+# eopkg list installed
+function list { sudo eopkg list-installed $1 }
+
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
