@@ -110,6 +110,9 @@ function runjava { javac $1.java && java $1 }
 # clang -o program program.c
 function runc { clang -o $1 $1.c && ./$1 }
 
+# python3 Program.py
+function py { python3 $1 }
+
 # eopkg install
 function install { sudo eopkg install $1 }
 
