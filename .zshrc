@@ -98,6 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias up='sudo eopkg up'
 alias netbeans='~/uni/vidmot_HBV201/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
+alias c='xclip -selection clipboard'
+
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
 #    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
