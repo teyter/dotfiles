@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 alias up='sudo eopkg up'
 alias netbeans='~/uni/vidmot_HBV201/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
 alias c='xclip -selection clipboard'
+alias jup='jupyter notebook'
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
