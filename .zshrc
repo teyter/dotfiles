@@ -141,3 +141,6 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+# algs4.jar
+export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar
