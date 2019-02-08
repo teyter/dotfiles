@@ -101,11 +101,12 @@ alias netbeans='~/uni/vidmot_HBV201/incubating-netbeans-10.0-source/nbbuild/netb
 alias c='xclip -selection clipboard'
 alias jup='jupyter notebook'
 
-prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-#    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  fi
- }
+## un comment when using agnoster theme ##
+# prompt_context() {
+#   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+#   fi
+#  }
 
 # javac Program.java && java Program.java
 function runjava { javac $1.java && java $1 }
