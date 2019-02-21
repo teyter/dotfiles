@@ -12,6 +12,8 @@ set nobackup
 
 set nu
 
+set paste
+
 syntax on
 
 colorscheme blazer
