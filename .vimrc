@@ -17,3 +17,7 @@ syntax on
 colorscheme blazer
 
 set t_Co=256
+
+nnoremap : :
+
+nnoremap ; :
