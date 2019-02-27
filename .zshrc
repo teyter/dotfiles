@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias up='sudo eopkg up'
+alias hib='systemctl hibernate'
 alias netbeans='~/uni/vidmot_HBV201/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
 alias c='xclip -selection clipboard'
 alias jup='jupyter notebook'
