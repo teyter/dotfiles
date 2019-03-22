@@ -101,6 +101,8 @@ alias up='sudo eopkg up'
 alias hib='systemctl hibernate'
 alias netbeans='~/uni/vidmot_HBV201/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
 alias c='xclip -selection clipboard'
+alias cc='xclip -i'
+alias v='xclip -o'
 alias jup='jupyter notebook'
 alias naut='nautilus'
 
