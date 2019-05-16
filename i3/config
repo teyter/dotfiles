@@ -180,7 +180,8 @@ bindsym Mod4+Shift+c reload
 bindsym Mod4+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+e exit
+# bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -257,8 +258,9 @@ gaps outer 0
 exec_always feh --bg-scale /home/teytur/Pictures/Wallpapers/cozy.jpg
 
 # rebind Caps to Esc
-exec_always xmodmap -e "clear lock" #disable caps lock switch
-exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+#exec_always xmodmap -e "clear lock" #disable caps lock switch
+#exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+exec_always setxkbmap -layout gb,is -option caps:escape
 
 # tapping and natural scrolling
 # xinput-list
@@ -272,8 +274,8 @@ exec_always xinput set-prop 'DELL07E6:00 06CB:76AF Touchpad' 'libinput Tapping E
 exec_always xinput set-prop 'DELL07E6:00 06CB:76AF Touchpad' 'libinput Natural Scrolling Enabled' 1
 
 # set keyboard uk, is, toggle between
-exec "setxkbmap -layout gb,is"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
+#exec setxkbmap -layout gb,is
+#exec setxkbmap -option 'grp:alt_shift_toggle'
 
 # compton
 exec_always compton -f
