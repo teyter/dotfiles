@@ -99,12 +99,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias up='sudo eopkg up'
 alias hib='systemctl hibernate'
-alias netbeans='~/uni/vidmot_HBV201/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
+alias naut='nautilus'
+alias netbeans='~/uni/vidmots/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
 alias c='xclip -selection clipboard'
 alias cc='xclip -i'
 alias v='xclip -o'
 alias jup='jupyter notebook'
-alias naut='nautilus'
+alias iskb='setxkbmap -layout is'
+alias gbkb='setxkbmap -layout gb'
 
 ## un comment when using agnoster theme ##
 # prompt_context() {
