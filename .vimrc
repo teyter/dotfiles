@@ -10,7 +10,9 @@ set smarttab
 
 set nobackup
 
-set nu
+"set nu
+
+set noshowmode
 
 syntax on
 
@@ -21,3 +23,15 @@ set t_Co=256
 nnoremap : :
 
 nnoremap ; :
+
+execute pathogen#infect()
+
+""show full path in in statusline
+let g:airline_section_c='%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+
+let g:airline_theme='distinguished'
+"distinguished
+"base16_grayscale
+"minimal
+"behelit
+
