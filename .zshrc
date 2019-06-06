@@ -127,6 +127,9 @@ function py { python3 $1 }
 # eopkg install
 function install { sudo eopkg install $1 }
 
+# eopkg remove
+function remove { sudo eopkg remove $1 }
+
 # eopkg search
 function search { sudo eopkg search $1 }
 
