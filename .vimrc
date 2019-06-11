@@ -26,6 +26,9 @@ nnoremap ; :
 
 execute pathogen#infect()
 
+""makes arrows
+let g:airline_powerline_fonts=1
+
 ""show full path in in statusline
 let g:airline_section_c='%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
