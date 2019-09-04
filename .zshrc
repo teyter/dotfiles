@@ -99,16 +99,22 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias up='sudo eopkg up'
 alias hib='systemctl hibernate'
+alias shutdown='systemctl shutdown'
 alias naut='nautilus'
 alias netbeans='~/uni/vidmots/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
 alias c='xclip -selection clipboard'
 alias cc='xclip -i'
 alias v='xclip -o'
+alias py='python3'
 alias jup='jupyter notebook'
+alias pls='sudo'
+alias za='zathura'
+
+# alias for i3wm
 alias iskb='setxkbmap -layout is'
 alias gbkb='setxkbmap -layout gb'
 
-## un comment when using agnoster theme ##
+## uncomment when using agnoster theme ##
 # prompt_context() {
 #   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
 #     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
@@ -120,9 +126,6 @@ function runjava { javac $1.java && java $1 }
 
 # clang -o program program.c
 function runc { clang -o $1 $1.c && ./$1 }
-
-# python3 Program.py
-function py { python3 $1 }
 
 # eopkg install
 function install { sudo eopkg install $1 }
