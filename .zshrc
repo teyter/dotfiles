@@ -109,6 +109,7 @@ alias py='python3'
 alias jup='jupyter notebook'
 alias pls='sudo'
 alias za='zathura'
+alias pdflatex='pdflatex -shell-escape'
 
 # alias for i3wm
 alias iskb='setxkbmap -layout is'
