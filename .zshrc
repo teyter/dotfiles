@@ -65,6 +65,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   vi-mode
+  fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,10 +111,15 @@ alias jup='jupyter notebook'
 alias pls='sudo'
 alias za='zathura'
 alias pdflatex='pdflatex -shell-escape'
+alias srcz='source ~/.zshrc'
+alias vimz='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+alias vimtx='vim ~/.tmux.conf'
+alias sql='sqlite3 -header -column'
 
 # alias for i3wm
-alias iskb='setxkbmap -layout is'
-alias gbkb='setxkbmap -layout gb'
+alias iskb='setxkbmap -layout is | echo "Íslenskt lyklaborð komið í gírinn."'
+alias gbkb='setxkbmap -layout gb | echo "UK keyboard layout activated.\nu wot m8?"'
 
 ## uncomment when using agnoster theme ##
 # prompt_context() {
