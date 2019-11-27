@@ -28,6 +28,9 @@ nnoremap ; :
 
 nnoremap æ :
 
+"yank clipboard
+set clipboard=unnamedplus
+
 execute pathogen#infect()
 
 ""zathura pdf viewer for vim-latex-preview
