@@ -36,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -128,11 +128,17 @@ alias gbkb='setxkbmap -layout gb | echo "UK keyboard layout activated.\nu wot m8
 #   fi
 #  }
 
+function man() {
+  /usr/bin/man $@ | \
+    col -b | \
+    vim -R -c 'set ft=man nomod nolist' -
+}
+
 # javac Program.java && java Program.java
 function runjava { javac $1.java && java $1 }
 
 # clang -o program program.c
-function runc { clang -o $1 $1.c && ./$1 }
+function runc { gcc -o $1 $1.c && ./$1 }
 
 # eopkg install
 function install { sudo eopkg install $1 }
