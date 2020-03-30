@@ -36,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -116,6 +116,11 @@ alias vimz='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias vimtx='vim ~/.tmux.conf'
 alias sql='sqlite3 -header -column'
+alias mit='rlwrap mit-scheme'
+alias hekla='ssh teg6@hekla.rhi.hi.is'
+alias gputop='sudo intel_gpu_top'
+alias ff='firefox'
+alias tetris='autoload -Uz tetriscurses && tetriscurses'
 
 # alias for i3wm
 alias iskb='setxkbmap -layout is | echo "Íslenskt lyklaborð komið í gírinn."'
@@ -127,12 +132,6 @@ alias gbkb='setxkbmap -layout gb | echo "UK keyboard layout activated.\nu wot m8
 #     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
 #   fi
 #  }
-
-function man() {
-  /usr/bin/man $@ | \
-    col -b | \
-    vim -R -c 'set ft=man nomod nolist' -
-}
 
 # javac Program.java && java Program.java
 function runjava { javac $1.java && java $1 }
@@ -151,6 +150,28 @@ function search { sudo eopkg search $1 }
 
 # eopkg list installed
 function list { sudo eopkg list-installed $1 }
+
+function man() {
+  /usr/bin/man $@ | \
+    col -b | \
+    vim -R -c 'set ft=man nomod nolist' -
+}
+function cl() {
+    local dir="$1"
+    local dir="${dir:=$HOME}"
+    if [[ -d "$dir" ]]; then
+        cd "$dir" >/dev/null; ls
+    else
+	echo "bash: cl: $dir: Directory not found"
+    fi
+}
+
+function calc() {
+    echo "scale=3;$@" | bc -l
+}
+
+
+zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.class'
 
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
