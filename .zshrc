@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+# vim gruvbox pathogen
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/teytur/.oh-my-zsh"
+export ZSH="/home/teytur/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,9 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias up='sudo eopkg up'
 alias hib='systemctl hibernate'
-alias shutdown='systemctl shutdown'
 alias naut='nautilus'
-alias netbeans='~/uni/vidmots/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans'
+alias netbeans='~/uni/vidmots/incubating-netbeans-10.0-source/nbbuild/netbeans/bin/netbeans & disown'
+# alias zoom='~/Documents/zoom_x86_64/zoom/ZoomLauncher & disown'
+
 alias c='xclip -selection clipboard'
 alias cc='xclip -i'
 alias v='xclip -o'
@@ -115,16 +117,79 @@ alias srcz='source ~/.zshrc'
 alias vimz='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias vimtx='vim ~/.tmux.conf'
+alias i3conf='vim ~/.config/i3/config'
 alias sql='sqlite3 -header -column'
 alias mit='rlwrap mit-scheme'
 alias hekla='ssh teg6@hekla.rhi.hi.is'
 alias gputop='sudo intel_gpu_top'
 alias ff='firefox'
 alias tetris='autoload -Uz tetriscurses && tetriscurses'
+alias hugbo='psql "dbname=gfuwxdnl host=balarama.db.elephantsql.com user=gfuwxdnl password= aJEImx-neFDHBx8x64XCSXoflhaAbsIO port=5432 sslmode=require"'
 
 # alias for i3wm
-alias iskb='setxkbmap -layout is | echo "Íslenskt lyklaborð komið í gírinn."'
-alias gbkb='setxkbmap -layout gb | echo "UK keyboard layout activated.\nu wot m8?"'
+alias is='setxkbmap -layout is | echo "
+                                                                                                        dddddddd                                            
+IIIIIIIIII                                       lllllll                                                d::::::d  iiii                                      
+I::::::::I                                       l:::::l                                                d::::::d i::::i                                     
+I::::::::I                                       l:::::l                                                d::::::d  iiii                                      
+II::::::II                                       l:::::l                                                d:::::d                                             
+  I::::I      cccccccccccccccc    eeeeeeeeeeee    l::::l   aaaaaaaaaaaaa  nnnn  nnnnnnnn        ddddddddd:::::d iiiiiii     cccccccccccccccc                
+  I::::I    cc:::::::::::::::c  ee::::::::::::ee  l::::l   a::::::::::::a n:::nn::::::::nn    dd::::::::::::::d i:::::i   cc:::::::::::::::c                
+  I::::I   c:::::::::::::::::c e::::::eeeee:::::eel::::l   aaaaaaaaa:::::an::::::::::::::nn  d::::::::::::::::d  i::::i  c:::::::::::::::::c                
+  I::::I  c:::::::cccccc:::::ce::::::e     e:::::el::::l            a::::ann:::::::::::::::nd:::::::ddddd:::::d  i::::i c:::::::cccccc:::::c                
+  I::::I  c::::::c     ccccccce:::::::eeeee::::::el::::l     aaaaaaa:::::a  n:::::nnnn:::::nd::::::d    d:::::d  i::::i c::::::c     ccccccc                
+  I::::I  c:::::c             e:::::::::::::::::e l::::l   aa::::::::::::a  n::::n    n::::nd:::::d     d:::::d  i::::i c:::::c                             
+  I::::I  c:::::c             e::::::eeeeeeeeeee  l::::l  a::::aaaa::::::a  n::::n    n::::nd:::::d     d:::::d  i::::i c:::::c                             
+  I::::I  c::::::c     ccccccce:::::::e           l::::l a::::a    a:::::a  n::::n    n::::nd:::::d     d:::::d  i::::i c::::::c     ccccccc                
+II::::::IIc:::::::cccccc:::::ce::::::::e         l::::::la::::a    a:::::a  n::::n    n::::nd::::::ddddd::::::ddi::::::ic:::::::cccccc:::::c                
+I::::::::I c:::::::::::::::::c e::::::::eeeeeeee l::::::la:::::aaaa::::::a  n::::n    n::::n d:::::::::::::::::di::::::i c:::::::::::::::::c                
+I::::::::I  cc:::::::::::::::c  ee:::::::::::::e l::::::l a::::::::::aa:::a n::::n    n::::n  d:::::::::ddd::::di::::::i  cc:::::::::::::::c                
+IIIIIIIIII    cccccccccccccccc    eeeeeeeeeeeeee llllllll  aaaaaaaaaa  aaaa nnnnnn    nnnnnn   ddddddddd   dddddiiiiiiii    cccccccccccccccc                
+"'
+alias uk='setxkbmap -layout gb | echo "
+                                                                                                                
+        GGGGGGGGGGGGG                                                                tttt                       
+     GGG::::::::::::G                                                             ttt:::t                       
+   GG:::::::::::::::G                                                             t:::::t                       
+  G:::::GGGGGGGG::::G                                                             t:::::t                       
+ G:::::G       GGGGGGrrrrr   rrrrrrrrr       eeeeeeeeeeee    aaaaaaaaaaaaa  ttttttt:::::ttttttt                 
+G:::::G              r::::rrr:::::::::r    ee::::::::::::ee  a::::::::::::a t:::::::::::::::::t                 
+G:::::G              r:::::::::::::::::r  e::::::eeeee:::::eeaaaaaaaaa:::::at:::::::::::::::::t                 
+G:::::G    GGGGGGGGGGrr::::::rrrrr::::::re::::::e     e:::::e         a::::atttttt:::::::tttttt                 
+G:::::G    G::::::::G r:::::r     r:::::re:::::::eeeee::::::e  aaaaaaa:::::a      t:::::t                       
+G:::::G    GGGGG::::G r:::::r     rrrrrrre:::::::::::::::::e aa::::::::::::a      t:::::t                       
+G:::::G        G::::G r:::::r            e::::::eeeeeeeeeee a::::aaaa::::::a      t:::::t                       
+ G:::::G       G::::G r:::::r            e:::::::e         a::::a    a:::::a      t:::::t    tttttt             
+  G:::::GGGGGGGG::::G r:::::r            e::::::::e        a::::a    a:::::a      t::::::tttt:::::t             
+   GG:::::::::::::::G r:::::r             e::::::::eeeeeeeea:::::aaaa::::::a      tt::::::::::::::t             
+     GGG::::::GGG:::G r:::::r              ee:::::::::::::e a::::::::::aa:::a       tt:::::::::::tt             
+        GGGGGG   GGGG rrrrrrr                eeeeeeeeeeeeee  aaaaaaaaaa  aaaa         ttttttttttt               
+                                                                                                                
+                                                                                                                
+                                                                                                                
+BBBBBBBBBBBBBBBBB                        iiii          tttt                              iiii                   
+B::::::::::::::::B                      i::::i      ttt:::t                             i::::i                  
+B::::::BBBBBB:::::B                      iiii       t:::::t                              iiii                   
+BB:::::B     B:::::B                                t:::::t                                                     
+  B::::B     B:::::Brrrrr   rrrrrrrrr  iiiiiiittttttt:::::ttttttt      aaaaaaaaaaaaa   iiiiiiinnnn  nnnnnnnn    
+  B::::B     B:::::Br::::rrr:::::::::r i:::::it:::::::::::::::::t      a::::::::::::a  i:::::in:::nn::::::::nn  
+  B::::BBBBBB:::::B r:::::::::::::::::r i::::it:::::::::::::::::t      aaaaaaaaa:::::a  i::::in::::::::::::::nn 
+  B:::::::::::::BB  rr::::::rrrrr::::::ri::::itttttt:::::::tttttt               a::::a  i::::inn:::::::::::::::n
+  B::::BBBBBB:::::B  r:::::r     r:::::ri::::i      t:::::t              aaaaaaa:::::a  i::::i  n:::::nnnn:::::n
+  B::::B     B:::::B r:::::r     rrrrrrri::::i      t:::::t            aa::::::::::::a  i::::i  n::::n    n::::n
+  B::::B     B:::::B r:::::r            i::::i      t:::::t           a::::aaaa::::::a  i::::i  n::::n    n::::n
+  B::::B     B:::::B r:::::r            i::::i      t:::::t    tttttta::::a    a:::::a  i::::i  n::::n    n::::n
+BB:::::BBBBBB::::::B r:::::r           i::::::i     t::::::tttt:::::ta::::a    a:::::a i::::::i n::::n    n::::n
+B:::::::::::::::::B  r:::::r           i::::::i     tt::::::::::::::ta:::::aaaa::::::a i::::::i n::::n    n::::n
+B::::::::::::::::B   r:::::r           i::::::i       tt:::::::::::tt a::::::::::aa:::ai::::::i n::::n    n::::n
+BBBBBBBBBBBBBBBBB    rrrrrrr           iiiiiiii         ttttttttttt    aaaaaaaaaa  aaaaiiiiiiii nnnnnn    nnnnnn
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                
+                                                                                                                "'
 
 ## uncomment when using agnoster theme ##
 # prompt_context() {
@@ -172,6 +237,7 @@ function calc() {
 
 
 zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.class'
+zstyle ':completion:*:*:ff:*:*files' ignored-patterns '*.js'
 
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
@@ -192,3 +258,8 @@ unset __conda_setup
 
 # algs4.jar
 export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar
+export CLASSPATH=$CLASSPATH:~/algs4/TeitLibrary
+# JDBC postgresql
+export CLASSPATH=$CLASSPATH:~/JDBC/postgresql-42.2.11.jar
+# JDBC sqlite
+export CLASSPATH=$CLASSPATH:~/junit/junit-4.10.jar
