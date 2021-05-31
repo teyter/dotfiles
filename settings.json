@@ -1,0 +1,36 @@
+{
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "vim.cursorStylePerMode.insert": "underline",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+    
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [":"],
+            "after": [":"]
+        },
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+        {
+            "before": ["æ"],
+            "after": [":"]
+        },
+        {
+            "before": ["Æ"],
+            "after": [":"]
+        },
+        {
+            "before": ["þ"],
+            "after": ["/"]
+        },
+        {
+            "before": ["<Space>"],
+            "after": ["@", "q"]
+        }
+    ],
+    "editor.lineNumbers": "relative"
+}
