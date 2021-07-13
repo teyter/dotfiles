@@ -1,11 +1,15 @@
-{
-    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    // gruvbox theme settings
     "workbench.colorTheme": "Gruvbox Material Dark",
+    "gruvboxMaterial.darkWorkbench": "high-contrast",
+    "gruvboxMaterial.darkContrast": "soft",
+    "gruvboxMaterial.lightWorkbench": "high-contrast",
+    "gruvboxMaterial.lightContrast": "soft",
+    // .vimrc
+    "editor.lineNumbers": "relative",
     "vim.cursorStylePerMode.insert": "underline",
     "vim.hlsearch": true,
-    "vim.normalModeKeyBindings": [
-    
-    ],
+    "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [":"],
@@ -32,5 +36,4 @@
             "after": ["@", "q"]
         }
     ],
-    "editor.lineNumbers": "relative"
 }

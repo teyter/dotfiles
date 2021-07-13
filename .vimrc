@@ -11,8 +11,8 @@ set noshowmode " hide mode indicator bc airline does that now
 "set hlsearch
 set incsearch " live search hl
 set wrapscan " search cycles to top
-set nu
-set rnu
+set nu " numbered lines
+set rnu " relatively numbered lines
 nnoremap : :
 nnoremap ; :
 nnoremap æ :
